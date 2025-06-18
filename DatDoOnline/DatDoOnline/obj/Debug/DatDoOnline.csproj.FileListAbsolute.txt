@@ -1,0 +1,14 @@
+D:\HQTCSDL_BTL\DatDoOnline\DatDoOnline\bin\Debug\DatDoOnline.exe.config
+D:\HQTCSDL_BTL\DatDoOnline\DatDoOnline\bin\Debug\DatDoOnline.exe
+D:\HQTCSDL_BTL\DatDoOnline\DatDoOnline\bin\Debug\DatDoOnline.pdb
+D:\HQTCSDL_BTL\DatDoOnline\DatDoOnline\obj\Debug\DatDoOnline.csproj.AssemblyReference.cache
+D:\HQTCSDL_BTL\DatDoOnline\DatDoOnline\obj\Debug\DatDoOnline.Properties.Resources.resources
+D:\HQTCSDL_BTL\DatDoOnline\DatDoOnline\obj\Debug\DatDoOnline.csproj.GenerateResource.cache
+D:\HQTCSDL_BTL\DatDoOnline\DatDoOnline\obj\Debug\DatDoOnline.csproj.CoreCompileInputs.cache
+D:\HQTCSDL_BTL\DatDoOnline\DatDoOnline\obj\Debug\DatDoOnline.exe
+D:\HQTCSDL_BTL\DatDoOnline\DatDoOnline\obj\Debug\DatDoOnline.pdb
+D:\HQTCSDL_BTL\DatDoOnline\DatDoOnline\obj\Debug\DatDoOnline.Admin.TrangChu_Admin.resources
+D:\HQTCSDL_BTL\DatDoOnline\DatDoOnline\obj\Debug\DatDoOnline.Login.DangKi.resources
+D:\HQTCSDL_BTL\DatDoOnline\DatDoOnline\obj\Debug\DatDoOnline.DangNhap.resources
+D:\HQTCSDL_BTL\DatDoOnline\DatDoOnline\obj\Debug\DatDoOnline.Users.TrangChu.resources
+D:\HQTCSDL_BTL\DatDoOnline\DatDoOnline\obj\Debug\DatDoOnline.Users.Order.resources
