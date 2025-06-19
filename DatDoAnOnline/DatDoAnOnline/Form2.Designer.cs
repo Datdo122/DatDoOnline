@@ -65,23 +65,27 @@
             // Column1
             // 
             this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "iddonhang";
             this.Column1.HeaderText = "Mã đơn hàng";
             this.Column1.Name = "Column1";
             // 
             // Column4
             // 
             this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.DataPropertyName = "create_at";
             this.Column4.HeaderText = "Thời gian";
             this.Column4.Name = "Column4";
             // 
             // Column2
             // 
+            this.Column2.DataPropertyName = "tongtien";
             this.Column2.HeaderText = "Tổng tiền";
             this.Column2.Name = "Column2";
             // 
             // Column3
             // 
             this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "trangthai";
             this.Column3.HeaderText = "Trạng thái";
             this.Column3.Name = "Column3";
             // 
@@ -93,6 +97,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

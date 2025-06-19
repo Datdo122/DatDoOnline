@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DatDoAnOnline.HoaDon;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,10 +15,12 @@ namespace DatDoAnOnline
 {
     public partial class Form1: Form
     {
-        string connect = "Data Source=DODAT\\DODAT;Initial Catalog = datdoan; Integrated Security = True";
+        string connect = "Data Source=DODAT\\DODAT;Initial Catalog=datdoan;Integrated Security=True";
         SqlConnection conn = null;
         Random rnd = new Random();
         int maHoaDon;
+
+        public static MaHoaDon hoaDon;
 
         public Form1()
         {
@@ -48,6 +51,7 @@ namespace DatDoAnOnline
             conn.Open();
             loadMenu();
             maHoaDon = rnd.Next(100000, 999999);
+            textBox1.ForeColor = Color.Gray;
 
         }
 
@@ -116,19 +120,72 @@ namespace DatDoAnOnline
             cmd = conn.CreateCommand();
             cmd.CommandText = "select Gia from MON_AN where TenMon = '" + label4.Text + "' ";
             var GiaMon = cmd.ExecuteScalar();
-            var Gia = (string)GiaMon;
+            string Gia = GiaMon.ToString();
             label13.Text = Gia;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            hoaDon = new MaHoaDon
+            {
+                mahoadon = maHoaDon,
+            };
             SqlCommand cmd = null;
             cmd = conn.CreateCommand();
-            cmd.CommandText = "insert into DonHang(iddonhang, tongtien, trangthai, create_at) values ('" + maHoaDon + "', '" + textBox2.Text + "', N'Đã Đặt', GETDATE())";
+            float tongtien = float.Parse(textBox2.Text);
+            cmd.CommandText = "insert into DonHang(iddonhang, tongtien, trangthai, create_at) values ('" + maHoaDon + "', '" + tongtien + "', N'Chờ thanh toán', GETDATE())";
             cmd.ExecuteNonQuery();
             maHoaDon = rnd.Next(100000, 999999);
-            ThanhToan thanhToan = new ThanhToan();
+            ThanhToan thanhToan = new ThanhToan(hoaDon);
             thanhToan.Show();
+        }
+
+        private void textBox1_Enter(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "🗒 Nhập ghi chú...")
+            {
+                textBox1.Text = "";
+                textBox1.ForeColor = Color.Black;
+            }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView1.SelectedItems.Count == 0)
+                return;
+            string text = listView1.SelectedItems[0].Text;
+            if (text == "Tất Cả")
+            {
+                loadMenu();
+            }
+            else
+            {
+                loadDanhMuc(text);
+            }
+        }
+
+        public void loadDanhMuc(string danhmuc)
+        {
+            SqlCommand cmd = null;
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            DataTable dt = new DataTable();
+            cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT ma.TenMon, ma.Gia FROM MON_AN ma JOIN DANH_MUC dm ON ma.ID_DanhMuc = dm.ID WHERE dm.TenDanhMuc = '"+danhmuc+"' ";
+            adapter.SelectCommand = cmd;
+            dt.Clear();
+            adapter.Fill(dt);
+            dataGridView2.DataSource = dt;
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.Show();
         }
     }
 }
