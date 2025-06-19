@@ -1,0 +1,12 @@
+D:\CVDTT_BTL\DatDoAnOnline\DatDoAnOnline\bin\Debug\DatDoAnOnline.exe.config
+D:\CVDTT_BTL\DatDoAnOnline\DatDoAnOnline\bin\Debug\DatDoAnOnline.exe
+D:\CVDTT_BTL\DatDoAnOnline\DatDoAnOnline\bin\Debug\DatDoAnOnline.pdb
+D:\CVDTT_BTL\DatDoAnOnline\DatDoAnOnline\obj\Debug\DatDoAnOnline.csproj.AssemblyReference.cache
+D:\CVDTT_BTL\DatDoAnOnline\DatDoAnOnline\obj\Debug\DatDoAnOnline.Form1.resources
+D:\CVDTT_BTL\DatDoAnOnline\DatDoAnOnline\obj\Debug\DatDoAnOnline.Properties.Resources.resources
+D:\CVDTT_BTL\DatDoAnOnline\DatDoAnOnline\obj\Debug\DatDoAnOnline.csproj.GenerateResource.cache
+D:\CVDTT_BTL\DatDoAnOnline\DatDoAnOnline\obj\Debug\DatDoAnOnline.csproj.CoreCompileInputs.cache
+D:\CVDTT_BTL\DatDoAnOnline\DatDoAnOnline\obj\Debug\DatDoAnOnline.exe
+D:\CVDTT_BTL\DatDoAnOnline\DatDoAnOnline\obj\Debug\DatDoAnOnline.pdb
+D:\CVDTT_BTL\DatDoAnOnline\DatDoAnOnline\obj\Debug\DatDoAnOnline.ThanhToan.resources
+D:\CVDTT_BTL\DatDoAnOnline\DatDoAnOnline\obj\Debug\DatDoAnOnline.Form2.resources
